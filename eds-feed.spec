@@ -5,7 +5,7 @@
 Summary:	Evolution Data Server feed for Galago
 Name:		eds-feed
 Version:	0.5.0
-Release: %mkrel 9
+Release: %mkrel 10
 License:	GPLv2+
 Group:		System/Servers
 URL:		http://www.galago-project.org/
