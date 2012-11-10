@@ -1,0 +1,18 @@
+--- eds-feed-0.5.0/src/main.c~	2006-04-12 09:06:40.000000000 +0200
++++ eds-feed-0.5.0/src/main.c	2006-07-25 16:46:00.000000000 +0200
+@@ -184,12 +184,12 @@
+ 		{
+ 			case E_CONTACT_PHOTO_TYPE_INLINED:
+ 				photo = galago_image_new_from_data(
+-					(guchar *)ephoto->inlined.data, ephoto->inlined.length);
++					(guchar *)ephoto->data.inlined.data, ephoto->data.inlined.length);
+ 				break;
+ 
+ 			case E_CONTACT_PHOTO_TYPE_URI:
+-				if (g_str_has_prefix(ephoto->uri, "file://"))
+-					photo = galago_image_new_from_file(ephoto->uri + 7);
++				if (g_str_has_prefix(ephoto->data.uri, "file://"))
++					photo = galago_image_new_from_file(ephoto->data.uri + 7);
+ 				else
+ 				{
+ 					/* TODO: use gnome-vfs? */
