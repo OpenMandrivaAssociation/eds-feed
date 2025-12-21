@@ -12,6 +12,11 @@ URL:		https://www.galago-project.org/
 Source:		http://www.galago-project.org/files/releases/source/eds-feed/%{name}-%{version}.tar.bz2
 Patch: eds-feed-0.5.0-new-eds.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: libgalago-devel             >= %{galago_version}
 BuildRequires: evolution-data-server-devel >= %{eds_version}
 BuildRequires: glib2-devel                 >= %{glib2_version}
